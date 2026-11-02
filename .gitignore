@@ -1,0 +1,14 @@
+# Data: rebuilt by `python build_dataset.py` (raw downloads ~2.5 GB, DuckDB scratch ~600 MB)
+data/
+
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
