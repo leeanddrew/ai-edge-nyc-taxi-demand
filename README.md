@@ -11,8 +11,8 @@ table (columns, sources, caveats, and a map of the modeled zones).
 Requires **Python 3.11+** (tested on 3.13).
 
 ```bash
-git clone <repo-url>
-cd <repo-folder>
+git clone https://github.com/leeanddrew/ai-edge-nyc-taxi-demand.git
+cd ai-edge-nyc-taxi-demand
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
