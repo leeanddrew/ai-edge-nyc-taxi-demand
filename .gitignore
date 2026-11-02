@@ -12,6 +12,7 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
+.docs/
 
 # Course handout (not ours to publish)
 Project.pdf
