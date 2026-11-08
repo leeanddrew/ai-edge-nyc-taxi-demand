@@ -174,6 +174,15 @@ records completed trips, so these are simulated savings to confirm in a pilot.
 - **Weather adds nothing** (best model without it: MAE 13.64). **Weak spot:** winter storms (25 Jan, 23 Feb 2026), when
   demand fell to 23–40% of normal.
 
+**Where forecasts miss most (gradient boosting, test-year WAPE by zone):**
+
+![Map of forecast error by taxi zone](results/figures/zone_wape_map.png)
+
+Forecasts are most accurate in the dense Upper East Side–Midtown core (10–13% error) and least accurate at
+Manhattan's edges (Harlem and Morningside Heights at 21–23%, the far West Side and Lower Manhattan at 19–22%) and at
+LaGuardia (20%), where demand is thinner or driven by things the model doesn't see, like events, office schedules and
+flights.
+
 ### 4.4 Neural network architectures (CV MAE, lower is better)
 
 PyTorch on GPU, 120 inputs → ReLU hidden layers → 1 output; early stopping on the latest 10% of training rows.
@@ -218,6 +227,7 @@ PyTorch on GPU, 120 inputs → ReLU hidden layers → 1 output; early stopping o
 | `build_dataset.py` | Deterministic data pipeline (download → DuckDB → `data/model_table.csv.gz` + summary PDF) |
 | `notebooks/modeling.ipynb` | CV, tuning, test scoring, diagnostics, fleet dollar backtest |
 | `results/model_comparison.csv` | Final comparison table (accuracy + dollars) |
+| `results/figures/` | Figures used in this README (zone error map) |
 | `results/cache/` | Saved models and predictions (not committed); delete or set `RETRAIN=1` to retrain |
 | `dataset_summary.pdf` | One-page data reference |
 
