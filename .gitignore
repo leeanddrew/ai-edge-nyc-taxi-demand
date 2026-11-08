@@ -16,3 +16,6 @@ __pycache__/
 
 # Course handout (not ours to publish)
 Project.pdf
+
+# Saved models / predictions written by the notebook (large; regenerate by running it)
+results/cache/
