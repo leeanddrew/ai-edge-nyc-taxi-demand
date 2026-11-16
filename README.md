@@ -1,5 +1,9 @@
 # SmartFleet: Day-Ahead NYC Yellow-Taxi Demand Forecasting
 
+#### Authors: Andrew Lee, Nafisah Abdulsalam, Olumayokun Awe, Ignacio Vazquez
+
+---
+
 Forecast hourly yellow-taxi **pickups** in each of 49 busy NYC zones (47 Manhattan + JFK + LaGuardia) **24 hours ahead**,
 so vehicles can be positioned before demand appears. The best model (gradient boosting) cuts forecast error by
 **~29% vs the best naive rule** (same-hour four-week average) on a full held-out year. Across all yellow-cab rides in
